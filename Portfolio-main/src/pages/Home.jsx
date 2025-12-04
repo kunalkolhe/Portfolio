@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { BiLogoGmail } from "react-icons/bi";
@@ -6,14 +6,6 @@ import { BsGithub, BsTwitterX } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
-  const [animationComplete, setAnimationComplete] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimationComplete(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
   const socialLinks = [
     { Icon: BiLogoGmail, href: "mailto:kolhe1644@gmail.com" },
     { Icon: IoLogoLinkedin, href: "https://www.linkedin.com/in/kunal-kolhe-852766342" },
@@ -32,21 +24,34 @@ export default function Home() {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
 
-          <div className="mb-6 lg:mb-8">
-            <h1 
-              className={`text-4xl lg:text-6xl handwriting-animation ${animationComplete ? 'complete' : ''}`}
-            >
-              Kunal Kolhe
-            </h1>
-          </div>
-
           <motion.div
-            className="text-xl lg:text-4xl flex flex-col gap-2 lg:gap-4 text-nowrap"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2.2, duration: 0.5 }}
+            className="text-2xl lg:text-5xl flex flex-col mt-8 lg:mt-0 gap-2 lg:gap-5 text-nowrap"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { staggerChildren: 0.2, ease: "easeInOut" },
+              },
+            }}
           >
-            <h2>
+            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
+              Hello, <TypeAnimation
+                sequence={[
+                  'I am Kunal Kolhe',
+                  2000,
+                  '',
+                  500,
+                ]}
+                speed={50}
+                deletionSpeed={40}
+                style={{ fontWeight: 600 }}
+                repeat={Infinity}
+              />
+            </motion.h2>
+            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
               <span className="font-extrabold">Full Stack</span>{" "}
               <span
                 className="text-white font-extrabold"
@@ -54,17 +59,17 @@ export default function Home() {
               >
                 Developer
               </span>
-            </h2>
-            <h2>
+            </motion.h2>
+            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
               Based In <span className="font-extrabold">India.</span>
-            </h2>
+            </motion.h2>
           </motion.div>
 
           <motion.p
             className="text-[#71717A] text-sm lg:text-base mt-5"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.5, duration: 0.5 }}
+            transition={{ delay: 0.5, duration: 1 }}
           >
             I'm a B.Tech Computer Science student who loves turning ideas into reality through code. 
             I specialize in building modern web applications using React, Node.js, and cutting-edge technologies. 
@@ -75,7 +80,7 @@ export default function Home() {
             className="flex items-center gap-x-5 mt-10 lg:mt-14"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.8, duration: 0.5 }}
+            transition={{ delay: 0.8, duration: 1 }}
           >
             {socialLinks.map((social, index) => (
               <motion.a
