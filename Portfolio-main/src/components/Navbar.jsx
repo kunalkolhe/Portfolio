@@ -40,10 +40,14 @@ export default function Navbar() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => scrollToSection("home")}
-          className="h-9 cursor-pointer font-bold text-xl flex items-center"
+          className="h-9 cursor-pointer flex items-center"
         >
-          <span className="bg-black text-white px-2 py-1 rounded mr-1">KK</span>
-          <span>Kunal</span>
+          <span 
+            className="text-2xl lg:text-3xl text-black"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
+          >
+            Kunal Kolhe
+          </span>
         </motion.div>
 
         <ul className="hidden lg:flex items-center gap-x-7 font-semibold">

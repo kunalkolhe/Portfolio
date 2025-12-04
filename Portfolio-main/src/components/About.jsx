@@ -26,7 +26,15 @@ export default function About() {
         </h2>
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-5 lg:mt-10">
-          I'm a B.Tech Computer Science student who loves turning ideas into reality through code. From building platforms that simplify government services to creating AI-powered solutions, I enjoy solving everyday problems with technology. When I'm not coding, you'll find me exploring new tech trends or participating in hackathons.
+          Hey there! I'm Kunal Kolhe, a B.Tech Computer Science Engineering student at Sanjivani University. I'm passionate about building web applications that make a real difference in people's lives and solve real-world problems.
+        </p>
+
+        <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
+          My tech stack includes React.js, Node.js, Express, MongoDB, and Supabase for building complete full-stack solutions. I've also explored AI and machine learning, completing an NPTEL course on Large Language Models.
+        </p>
+
+        <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
+          I've worked as a Software Development Trainee at HCL Technologies and participated in Smart India Hackathon 2025 with my team "Eco Innovator". I love collaborating with like-minded people and turning innovative ideas into working products!
         </p>
       </motion.div>
     </div>

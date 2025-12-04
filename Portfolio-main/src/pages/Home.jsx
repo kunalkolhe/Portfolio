@@ -72,9 +72,8 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 1 }}
           >
             I'm a B.Tech Computer Science student who loves turning ideas into reality through code. 
-            From building platforms that simplify government services to creating AI-powered solutions, 
-            I enjoy solving everyday problems with technology. When I'm not coding, you'll find me 
-            exploring new tech trends or participating in hackathons.
+            I specialize in building modern web applications using React, Node.js, and cutting-edge technologies. 
+            When I'm not coding, you'll find me exploring new tech trends or participating in hackathons.
           </motion.p>
 
           <motion.div
